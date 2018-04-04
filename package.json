@@ -24,7 +24,7 @@
   },
   "keywords": [
     "kefir",
-    "ramda",
+    "partial-lenses-validation",
     "reactive",
     "direct-style",
     "observable",
