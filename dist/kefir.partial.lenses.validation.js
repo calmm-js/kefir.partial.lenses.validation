@@ -4,6 +4,8 @@
 	(factory((global.Kefir = global.Kefir || {}, global.Kefir.partial = global.Kefir.partial || {}, global.Kefir.partial.lenses = global.Kefir.partial.lenses || {}, global.Kefir.partial.lenses.validation = {}),global.partial.lenses.validation,global.kefir.combines));
 }(this, (function (exports,V,kefir_combines) { 'use strict';
 
+	// THIS FILE IS GENERATED
+
 	var accept = /*#__PURE__*/kefir_combines.liftRec(V.accept);
 	var acceptAs = /*#__PURE__*/kefir_combines.liftRec(V.acceptAs);
 	var acceptWith = /*#__PURE__*/kefir_combines.liftRec(V.acceptWith);

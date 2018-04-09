@@ -5,6 +5,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var V = require('partial.lenses.validation');
 var kefir_combines = require('kefir.combines');
 
+// THIS FILE IS GENERATED
+
 var accept = /*#__PURE__*/kefir_combines.liftRec(V.accept);
 var acceptAs = /*#__PURE__*/kefir_combines.liftRec(V.acceptAs);
 var acceptWith = /*#__PURE__*/kefir_combines.liftRec(V.acceptWith);

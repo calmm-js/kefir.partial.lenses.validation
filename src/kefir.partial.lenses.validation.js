@@ -1,3 +1,5 @@
+// THIS FILE IS GENERATED
+
 import * as V from 'partial.lenses.validation'
 import {liftRec} from 'kefir.combines'
 

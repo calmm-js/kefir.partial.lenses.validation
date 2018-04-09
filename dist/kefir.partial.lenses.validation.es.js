@@ -1,6 +1,8 @@
 import { accept, acceptAs, acceptWith, accepts, acceptsAsync, and, args, arrayId, arrayIx, both, cases, casesOf, choose, dependentFn, either, errors, errorsAsync, freeFn, ifElse, keep, lazy, modifyAfter, modifyError, not, optional, or, promote, props, propsOr, reject, rejectAs, rejectWith, remove, removeAfter, run, setAfter, setError, tryValidateAsyncNow, tuple, upgrades, upgradesOf, validate, validateAsync, where } from 'partial.lenses.validation';
 import { liftRec } from 'kefir.combines';
 
+// THIS FILE IS GENERATED
+
 var accept$1 = /*#__PURE__*/liftRec(accept);
 var acceptAs$1 = /*#__PURE__*/liftRec(acceptAs);
 var acceptWith$1 = /*#__PURE__*/liftRec(acceptWith);
