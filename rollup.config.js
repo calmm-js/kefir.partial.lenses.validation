@@ -3,7 +3,7 @@ import nodeResolve from 'rollup-plugin-node-resolve'
 import replace from 'rollup-plugin-replace'
 import uglify from 'rollup-plugin-uglify'
 
-export default {
+const build = ({NODE_ENV, format, suffix}) => ({
   external: [
     'infestines',
     'kefir',
@@ -11,6 +11,7 @@ export default {
     'partial.lenses',
     'partial.lenses.validation'
   ],
+  input: 'src/kefir.partial.lenses.validation.js',
   output: {
     globals: {
       infestines: 'I',
@@ -18,14 +19,16 @@ export default {
       'kefir.combines': 'kefir.combines',
       'partial.lenses': 'partial.lenses',
       'partial.lenses.validation': 'partial.lenses.validation'
-    }
+    },
+    name: 'kefir.partial.lenses.validation',
+    format,
+    file: `dist/kefir.partial.lenses.validation.${suffix}`
   },
   plugins: [
-    process.env.NODE_ENV &&
-      replace({'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)}),
+    NODE_ENV && replace({'process.env.NODE_ENV': JSON.stringify(NODE_ENV)}),
     nodeResolve(),
     babel(),
-    process.env.NODE_ENV === 'production' &&
+    NODE_ENV === 'production' &&
       uglify({
         compress: {
           hoist_funs: true,
@@ -35,4 +38,11 @@ export default {
         }
       })
   ].filter(x => x)
-}
+})
+
+export default [
+  build({format: 'cjs', suffix: 'cjs.js'}),
+  build({format: 'es', suffix: 'es.js'}),
+  build({format: 'umd', suffix: 'js', NODE_ENV: 'dev'}),
+  build({format: 'umd', suffix: 'min.js', NODE_ENV: 'production'})
+]

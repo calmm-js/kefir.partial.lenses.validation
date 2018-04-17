@@ -1,15 +1,11 @@
 {
   "name": "kefir.partial.lenses.validation",
-  "version": "0.3.8",
+  "version": "1.0.0",
   "description": "Partial Lenses Validation functions lifted to work on Kefir properties",
   "module": "dist/kefir.partial.lenses.validation.es.js",
   "main": "dist/kefir.partial.lenses.validation.cjs.js",
   "scripts": {
-    "dist": "concurrently \"npm run dist:umd\" \"npm run dist:umd.min\" \"npm run dist:es\" \"npm run dist:cjs\"",
-    "dist:cjs": "    NODE_ENV=           rollup -c -n kefir.partial.lenses.validation -i src/kefir.partial.lenses.validation.js -f cjs -o dist/kefir.partial.lenses.validation.cjs.js",
-    "dist:es": "     NODE_ENV=           rollup -c -n kefir.partial.lenses.validation -i src/kefir.partial.lenses.validation.js -f es  -o dist/kefir.partial.lenses.validation.es.js",
-    "dist:umd": "    NODE_ENV=dev        rollup -c -n kefir.partial.lenses.validation -i src/kefir.partial.lenses.validation.js -f umd -o dist/kefir.partial.lenses.validation.js",
-    "dist:umd.min": "NODE_ENV=production rollup -c -n kefir.partial.lenses.validation -i src/kefir.partial.lenses.validation.js -f umd -o dist/kefir.partial.lenses.validation.min.js",
+    "dist": "rollup -c",
     "lint": "eslint src test",
     "prepare": "node scripts/generate.js && npm run lint && npm run dist && npm run test",
     "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
@@ -59,7 +55,7 @@
   },
   "dependencies": {
     "kefir.combines": "^4.3.0",
-    "partial.lenses.validation": "^0.3.8"
+    "partial.lenses.validation": "^1.0.0"
   },
   "peerDependencies": {
     "kefir": "^3.7.0"
