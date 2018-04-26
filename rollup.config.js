@@ -3,23 +3,19 @@ import nodeResolve from 'rollup-plugin-node-resolve'
 import replace from 'rollup-plugin-replace'
 import uglify from 'rollup-plugin-uglify'
 
+const globals = {
+  'karet.lift': 'karet.lift',
+  'partial.lenses': 'partial.lenses',
+  'partial.lenses.validation': 'partial.lenses.validation',
+  infestines: 'I',
+  kefir: 'Kefir'
+}
+
 const build = ({NODE_ENV, format, suffix}) => ({
-  external: [
-    'infestines',
-    'kefir',
-    'kefir.combines',
-    'partial.lenses',
-    'partial.lenses.validation'
-  ],
+  external: Object.keys(globals),
   input: 'src/kefir.partial.lenses.validation.js',
   output: {
-    globals: {
-      infestines: 'I',
-      kefir: 'Kefir',
-      'kefir.combines': 'kefir.combines',
-      'partial.lenses': 'partial.lenses',
-      'partial.lenses.validation': 'partial.lenses.validation'
-    },
+    globals,
     name: 'kefir.partial.lenses.validation',
     format,
     file: `dist/kefir.partial.lenses.validation.${suffix}`

@@ -7,11 +7,11 @@ fs.writeFileSync(
   `// THIS FILE IS GENERATED
 
 import * as V from 'partial.lenses.validation'
-import {liftFOF} from 'kefir.combines'
+import * as K from 'karet.lift'
 
 ${Object.keys(V)
     .sort()
-    .map(name => `export const ${name} = liftFOF(V.${name})`)
+    .map(name => `export const ${name} = K.lift(V.${name})`)
     .join('\n')}
 `
 )
