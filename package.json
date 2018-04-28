@@ -4,6 +4,7 @@
   "description": "Partial Lenses Validation functions lifted to work on Kefir properties",
   "module": "dist/kefir.partial.lenses.validation.es.js",
   "main": "dist/kefir.partial.lenses.validation.cjs.js",
+  "sideEffects": false,
   "scripts": {
     "dist": "rollup -c",
     "lint": "eslint src test",
