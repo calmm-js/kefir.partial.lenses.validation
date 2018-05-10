@@ -3,7 +3,7 @@
 import * as V from 'partial.lenses.validation'
 import * as K from 'karet.lift'
 
-export const accept = K.lift(V.accept)
+export {accept} from 'partial.lenses.validation'
 export const acceptAs = K.lift(V.acceptAs)
 export const acceptWith = K.lift(V.acceptWith)
 export const accepts = K.lift(V.accepts)
@@ -32,10 +32,10 @@ export const or = K.lift(V.or)
 export const promote = K.lift(V.promote)
 export const props = K.lift(V.props)
 export const propsOr = K.lift(V.propsOr)
-export const reject = K.lift(V.reject)
+export {reject} from 'partial.lenses.validation'
 export const rejectAs = K.lift(V.rejectAs)
 export const rejectWith = K.lift(V.rejectWith)
-export const remove = K.lift(V.remove)
+export {remove} from 'partial.lenses.validation'
 export const removeAfter = K.lift(V.removeAfter)
 export const run = K.lift(V.run)
 export const setAfter = K.lift(V.setAfter)
