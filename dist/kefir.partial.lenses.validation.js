@@ -5,8 +5,6 @@
 }(this, (function (exports,V,K) { 'use strict';
 
 	// THIS FILE IS GENERATED
-
-	var accept = /*#__PURE__*/K.lift(V.accept);
 	var acceptAs = /*#__PURE__*/K.lift(V.acceptAs);
 	var acceptWith = /*#__PURE__*/K.lift(V.acceptWith);
 	var accepts = /*#__PURE__*/K.lift(V.accepts);
@@ -35,10 +33,8 @@
 	var promote = /*#__PURE__*/K.lift(V.promote);
 	var props = /*#__PURE__*/K.lift(V.props);
 	var propsOr = /*#__PURE__*/K.lift(V.propsOr);
-	var reject = /*#__PURE__*/K.lift(V.reject);
 	var rejectAs = /*#__PURE__*/K.lift(V.rejectAs);
 	var rejectWith = /*#__PURE__*/K.lift(V.rejectWith);
-	var remove = /*#__PURE__*/K.lift(V.remove);
 	var removeAfter = /*#__PURE__*/K.lift(V.removeAfter);
 	var run = /*#__PURE__*/K.lift(V.run);
 	var setAfter = /*#__PURE__*/K.lift(V.setAfter);
@@ -51,7 +47,9 @@
 	var validateAsync = /*#__PURE__*/K.lift(V.validateAsync);
 	var where = /*#__PURE__*/K.lift(V.where);
 
-	exports.accept = accept;
+	exports.accept = V.accept;
+	exports.reject = V.reject;
+	exports.remove = V.remove;
 	exports.acceptAs = acceptAs;
 	exports.acceptWith = acceptWith;
 	exports.accepts = accepts;
@@ -80,10 +78,8 @@
 	exports.promote = promote;
 	exports.props = props;
 	exports.propsOr = propsOr;
-	exports.reject = reject;
 	exports.rejectAs = rejectAs;
 	exports.rejectWith = rejectWith;
-	exports.remove = remove;
 	exports.removeAfter = removeAfter;
 	exports.run = run;
 	exports.setAfter = setAfter;

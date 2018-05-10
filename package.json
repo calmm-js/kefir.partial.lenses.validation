@@ -1,6 +1,6 @@
 {
   "name": "kefir.partial.lenses.validation",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Partial Lenses Validation functions lifted to work on Kefir properties",
   "module": "dist/kefir.partial.lenses.validation.es.js",
   "main": "dist/kefir.partial.lenses.validation.cjs.js",
